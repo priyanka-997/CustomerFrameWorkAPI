@@ -15,4 +15,7 @@ public class Routes {
 	
 	//Detect Device
 	public static String detect_device_post_url = base_url +"/api/order-place/detect-device";
+	
+	//List Variant Questions
+	public static String list_variant_questions_post_url = base_url + "/api/order-place/list-variant-questions";
 }
