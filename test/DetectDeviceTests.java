@@ -11,7 +11,7 @@ import io.restassured.response.Response;
 
 public class DetectDeviceTests {
 	
-	String variant_slug;
+	static String variant_slug;
 	DetectDevicePojo detectDevicePayload;
 	
 	@BeforeClass()

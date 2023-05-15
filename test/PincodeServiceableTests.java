@@ -10,7 +10,7 @@ import io.restassured.response.Response;
 
 public class PincodeServiceableTests {
 	
-	String City;
+	static String City;
 	PincodeServiceablePojo pincodePayload;
 	
 	@BeforeClass()

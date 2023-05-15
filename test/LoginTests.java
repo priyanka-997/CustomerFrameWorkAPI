@@ -11,7 +11,7 @@ import io.restassured.response.Response;
 
 public class LoginTests {
 	
-	String token;
+	public static String token;
 		LoginPojo userPayload;
 		
 		@BeforeClass()
