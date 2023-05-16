@@ -1,17 +1,17 @@
 package api.test;
 
 import org.testng.Assert;
-import org.testng.ITestContext;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import api.endpoints.GlobalVariables;
 import api.endpoints.LoginEndPoints;
 import api.payload.LoginPojo;
 import io.restassured.response.Response;
 
 public class LoginTests {
 	
-	public static String token;
+	
 		LoginPojo userPayload;
 		
 		@BeforeClass()
@@ -24,7 +24,7 @@ public class LoginTests {
 		}
 		
 		@Test(priority=1)
-		public void testLogin(ITestContext context) {
+		public void testLogin() {
 			
 		Response response= LoginEndPoints.Login(userPayload);
 		response.then().log().all();
@@ -35,7 +35,7 @@ public class LoginTests {
 		}
 				
 		@Test(priority=2)
-		public void testResendOtp(ITestContext context) {
+		public void testResendOtp() {
 			
 			Response response= LoginEndPoints.ResendOtp(userPayload);
 			response.then().log().all();
@@ -48,7 +48,7 @@ public class LoginTests {
 			}
 		
 		@Test(priority=3)
-		public void testVerifyOtp(ITestContext context) {
+		public void testVerifyOtp() {
 			
 			userPayload.setOtp(1111);
 			
@@ -59,10 +59,13 @@ public class LoginTests {
 			Assert.assertEquals(response.getStatusCode(), 200);
 			
 			
-		token= response.jsonPath().getString("tokens.token") ;
-		System.out.println("Generated token is " +token);
-		context.getSuite().setAttribute("token", token);
-				
+		GlobalVariables.token = response.jsonPath().getString("tokens.token") ;
+		System.out.println("Generated token is " +GlobalVariables.token);
+		
+		
+		GlobalVariables.mobileNumber = response.jsonPath().getString("profile.mobile");
+		System.out.println("Mobile number is " +GlobalVariables.mobileNumber);
+		
 				
 		}
 		

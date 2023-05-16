@@ -3,7 +3,7 @@ package api.payload;
 public class LoginPojo {
 	
 	String mobile_number ;
-	int otp= 1111;
+	int otp;
 	
 	
 	public String getMobile_number() {

@@ -2,9 +2,9 @@ package api.payload;
 
 public class PincodeServiceablePojo {
 	
-	int pincode =201301;
-	String order_type= "sell";
-	String category = "mobile";
+	int pincode;
+	String order_type;
+	String category ;
 
 	
 	public int getPincode() {

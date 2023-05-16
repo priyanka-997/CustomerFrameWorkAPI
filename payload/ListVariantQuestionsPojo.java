@@ -6,6 +6,7 @@ public class ListVariantQuestionsPojo {
 	String variantSlug ;
 	String exchange_method;
 	
+	
 	public String getCity() {
 		return city;
 	}

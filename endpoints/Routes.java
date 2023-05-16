@@ -10,7 +10,7 @@ public class Routes {
 	public static String resend_otp_post_url= base_url +"/api/login/resend-otp";
 	public static String verify_otp_post_url= base_url +"/api/login/verify-otp";
 	
-	//Pin code Serviceable
+	//Pin Code Serviceable
 	public static String pincode_serviecable_post_url= base_url +"/api/pincode/check-servicability";
 	
 	//Detect Device
@@ -18,4 +18,7 @@ public class Routes {
 	
 	//List Variant Questions
 	public static String list_variant_questions_post_url = base_url + "/api/order-place/list-variant-questions";
+	
+	//Get Common Quote
+	public static String get_common_quote_post_url = base_url +"/api/order-place/get-common-quote";
 }

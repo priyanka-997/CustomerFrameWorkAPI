@@ -1,16 +1,16 @@
 package api.test;
 
 import org.testng.Assert;
-import org.testng.ITestContext;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import api.endpoints.GlobalVariables;
 import api.endpoints.PincodeServiceableEndPoints;
 import api.payload.PincodeServiceablePojo;
 import io.restassured.response.Response;
 
 public class PincodeServiceableTests {
 	
-	static String City;
 	PincodeServiceablePojo pincodePayload;
 	
 	@BeforeClass()
@@ -25,7 +25,7 @@ public class PincodeServiceableTests {
 }
 
 	@Test(priority=4)
-	public void pincodeServiceable(ITestContext context) {
+	public void pincodeServiceable() {
 		Response response= PincodeServiceableEndPoints.pincodeServiceable(pincodePayload);
 		
 		response.then().log().all();
@@ -35,8 +35,8 @@ public class PincodeServiceableTests {
 		Assert.assertEquals(response.getStatusCode(), 200);
 		
 		
-		City = response.jsonPath().getString("details.pincode_city");
-		System.out.println("Pincode city is " +City);
-		context.getSuite().setAttribute("city", City);
+		GlobalVariables.City = response.jsonPath().getString("details.pincode_city");
+		System.out.println("Pincode city is " +GlobalVariables.City);
+		
 
 }}

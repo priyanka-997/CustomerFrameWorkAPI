@@ -1,17 +1,16 @@
 package api.test;
 
 import org.testng.Assert;
-import org.testng.ITestContext;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import api.endpoints.DetectDeviceEndPoints;
+import api.endpoints.GlobalVariables;
 import api.payload.DetectDevicePojo;
 import io.restassured.response.Response;
 
 public class DetectDeviceTests {
 	
-	static String variant_slug;
 	DetectDevicePojo detectDevicePayload;
 	
 	@BeforeClass()
@@ -27,7 +26,7 @@ public class DetectDeviceTests {
 	}
 	
 	@Test(priority=5)
-	public void testDetectDevice(ITestContext context) {
+	public void testDetectDevice() {
 		
 	Response response = DetectDeviceEndPoints.detectDevice(detectDevicePayload);
 		
@@ -36,9 +35,9 @@ public class DetectDeviceTests {
 		Assert.assertEquals(response.jsonPath().getString("message"), "Success");
 		Assert.assertEquals(response.getStatusCode(), 200);
 		
-	variant_slug= 	response.jsonPath().get("variant.product_url");
-	System.out.println("Variant slug is " +variant_slug );
-	context.getSuite().setAttribute("variant_slug", variant_slug);
+	GlobalVariables.variant_slug= 	response.jsonPath().get("variant.product_url");
+	System.out.println("Variant slug is " +GlobalVariables.variant_slug );
+	
 	
 	}
 }

@@ -3,10 +3,10 @@ package api.payload;
 public class DetectDevicePojo {
 	
 	
-	String model_number  = "RMX1971";
-	int internal_memory = 4 ;
-	int internal_storage =64;
-	String cpu_model = "Qualcomm Technologies";
+	String model_number  ;
+	int internal_memory ;
+	int internal_storage ;
+	String cpu_model ;
 	
 	
 	
