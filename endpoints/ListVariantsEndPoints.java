@@ -12,7 +12,7 @@ import io.restassured.response.Response;
 
 public class ListVariantsEndPoints {
 	
-	public static Response listVariantsQuestions(ListVariantQuestionsPojo listVariantsPayload,  ITestContext context) {
+	public static Response listVariantsQuestions(ListVariantQuestionsPojo listVariantsPayload, ITestContext context) {
 		
 		String bearerToken = (String) context.getAttribute(LoginTests.token);	
 		
