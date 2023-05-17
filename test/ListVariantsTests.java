@@ -15,11 +15,11 @@ public class ListVariantsTests {
 	@BeforeClass()
 	public void setupData() {
 		
-listVariantsPayload =  new ListVariantQuestionsPojo();
+         listVariantsPayload =  new ListVariantQuestionsPojo();
 		
-		listVariantsPayload.setCity(GlobalVariables.City);
+		 listVariantsPayload.setCity(GlobalVariables.city);
 		listVariantsPayload.setExchange_method("sell");
-		listVariantsPayload.setVariantSlug(GlobalVariables.variant_slug);		
+		 listVariantsPayload.setVariant_slug(GlobalVariables.variant_slug);		
 	}
 		
     @Test(priority=6)
@@ -33,8 +33,8 @@ listVariantsPayload =  new ListVariantQuestionsPojo();
 		Assert.assertEquals(response.jsonPath().getString("message"), "Success");
 		Assert.assertEquals(response.getStatusCode(), 200);
 		
-	GlobalVariables.variant_id= response.jsonPath().get("variant_details.variant_id");
-	System.out.println("Variant slug is " +GlobalVariables.variant_id );
+	GlobalVariables.variant_id= response.jsonPath().getString("variant_details.variant_id");
+	System.out.println("Variant id is " +GlobalVariables.variant_id );
 		
 	}
 	

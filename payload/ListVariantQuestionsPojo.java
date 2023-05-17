@@ -3,7 +3,7 @@ package api.payload;
 public class ListVariantQuestionsPojo {
 	
 	String city ;
-	String variantSlug ;
+	String variant_slug ;
 	String exchange_method;
 	
 	
@@ -13,11 +13,11 @@ public class ListVariantQuestionsPojo {
 	public void setCity(String city) {
 		this.city = city;
 	}
-	public String getVariantSlug() {
-		return variantSlug;
+	public String getVariant_slug() {
+		return variant_slug;
 	}
-	public void setVariantSlug(String variantSlug) {
-		this.variantSlug = variantSlug;
+	public void setVariant_slug(String variant_slug) {
+		this.variant_slug = variant_slug;
 	}
 	public String getExchange_method() {
 		return exchange_method;
@@ -25,6 +25,10 @@ public class ListVariantQuestionsPojo {
 	public void setExchange_method(String exchange_method) {
 		this.exchange_method = exchange_method;
 	}
+	
+	
+	
+	
 	
 	
 

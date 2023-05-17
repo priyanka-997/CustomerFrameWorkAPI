@@ -19,6 +19,9 @@ public class Routes {
 	//List Variant Questions
 	public static String list_variant_questions_post_url = base_url + "/api/order-place/list-variant-questions";
 	
-	//Get Common Quote
+	//Get  Common Quote
 	public static String get_common_quote_post_url = base_url +"/api/order-place/get-common-quote";
+	
+	//Get Address
+	public static String getAddress_get_url = base_url +"/api/order-place/get-address";
 }

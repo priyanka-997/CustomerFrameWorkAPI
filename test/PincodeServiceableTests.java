@@ -35,8 +35,8 @@ public class PincodeServiceableTests {
 		Assert.assertEquals(response.getStatusCode(), 200);
 		
 		
-		GlobalVariables.City = response.jsonPath().getString("details.pincode_city");
-		System.out.println("Pincode city is " +GlobalVariables.City);
+		GlobalVariables.city = response.jsonPath().getString("details.pincode_city");
+		System.out.println("Pincode city is " +GlobalVariables.city);
 		
 
 }}

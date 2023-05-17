@@ -22,4 +22,6 @@ public static Response getCommonQuote(String[] getCommonQuotePayload) {
 	return response;
 
 }
+
+ 
 }

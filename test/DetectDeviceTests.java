@@ -35,7 +35,7 @@ public class DetectDeviceTests {
 		Assert.assertEquals(response.jsonPath().getString("message"), "Success");
 		Assert.assertEquals(response.getStatusCode(), 200);
 		
-	GlobalVariables.variant_slug= 	response.jsonPath().get("variant.product_url");
+	GlobalVariables.variant_slug= 	response.jsonPath().getString("variant.product_url");
 	System.out.println("Variant slug is " +GlobalVariables.variant_slug );
 	
 	
