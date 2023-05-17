@@ -8,7 +8,7 @@ import io.restassured.response.Response;
 
 public class GetCommonQuoteTests {
 	
-	String[] GetCommonQuotePayload= {"\"exchange_method\", \"sell\""
+	static String[] GetCommonQuotePayload= {"\"exchange_method\", \"sell\""
 				        + " \"variant_id\", \"GlobalVariables.variant_id\""
 						+ "\"servicer_id\", \"187\""
 				        +"\"variantSlug\", \"GlobalVariables.variant_slug\""

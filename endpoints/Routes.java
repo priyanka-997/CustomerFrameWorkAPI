@@ -24,4 +24,7 @@ public class Routes {
 	
 	//Get Address
 	public static String getAddress_get_url = base_url +"/api/order-place/get-address";
+	
+	//Add Update Address
+	public static String addUpdateAddress_post_url= base_url +"/api/order-place/add-update-address";
 }
