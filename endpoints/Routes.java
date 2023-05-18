@@ -27,4 +27,7 @@ public class Routes {
 	
 	//Add Update Address
 	public static String addUpdateAddress_post_url= base_url +"/api/order-place/add-update-address";
+	
+	//Applicable Payment Methods
+	public static String applicablePaymentMethods_post_url =  base_url +"/api/order-place/applicable-payment-methods";
 }
