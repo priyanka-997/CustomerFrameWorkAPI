@@ -30,4 +30,8 @@ public class Routes {
 	
 	//Applicable Payment Methods
 	public static String applicablePaymentMethods_post_url =  base_url +"/api/order-place/applicable-payment-methods";
+	
+	//Verify IFSC
+	public static String verifyIfsc_post_url = base_url +"/api/order-place/verify-ifsc";
+	
 }
