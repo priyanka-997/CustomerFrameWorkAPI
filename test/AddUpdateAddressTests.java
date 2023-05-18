@@ -7,20 +7,29 @@ import io.restassured.response.Response;
 
 public class AddUpdateAddressTests {
 	
-	static String[] addUpdateAddressPayload = {"house_no", "A-53", "street_no", "24", "locality", "Noida City Center",
-			"pincode", "201301", "city", "Noida", "address_type", "Home", "state", "Uttar Pradesh"};
-
+public static String getaddUpdateAddressPayload() {
+		
+	String addUpdateAddressPayload= "{\n" +"\"house_no\":"
+			+ "\"A-53\", \n" +"\"street_no\":"
+			+"\"25\", \n" +"\"locality\":"
+			+"\"Noida City Center\", \n"+"\"pincode\":"
+			+"\"201301\", \n" +"\"city\":"
+			+"\"Noida\", \n" +"\"address_type\":"
+			+"\"Home\", \n" +"\"state\":"
+			+"\"Uttar Pradesh\"}";		
+		
+		return addUpdateAddressPayload;
+}
 			
 	@Test(priority=9)
 	public static void testAddUpdateAddress() {
 		
-		Response response = AddUpdateAddressEndPoints.addUpdateAddress(addUpdateAddressPayload);
+		Response response = AddUpdateAddressEndPoints.addUpdateAddress(getaddUpdateAddressPayload());
 				response.then().log().all();
 		
 				Assert.assertEquals(response.jsonPath().getString("message"), "Address has been added");
 				Assert.assertEquals(response.getStatusCode(), 200);
 				Assert.assertEquals(response.jsonPath().getString("address_type"), "Home");
-				Assert.assertEquals(response.time(), 200);
 				
 		
 	

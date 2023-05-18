@@ -6,7 +6,7 @@ import io.restassured.http.ContentType;
 
 public class GetCommonQuoteEndPoints {
 
-public static Response getCommonQuote(String[] getCommonQuotePayload) {
+public static Response getCommonQuote(String getCommonQuotePayload) {
 		
 	Response response= 	(Response) given()
 			.headers("Authorization", "Bearer " +GlobalVariables.token )

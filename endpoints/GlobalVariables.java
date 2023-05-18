@@ -10,6 +10,6 @@ public class GlobalVariables {
 	public static String quote_id;
 	public static String homeAddressID;
 	public static String officeAddressID;
-	public static String ifsc = "icic0000876";
+	public static final String ifsc = "icic0000876";
 	
 }
