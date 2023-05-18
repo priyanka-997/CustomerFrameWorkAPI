@@ -19,9 +19,6 @@ public class AddUpdateAddressEndPoints {
 		return response;
 		
 		
-		
-		
-		
 	}
 
 }
