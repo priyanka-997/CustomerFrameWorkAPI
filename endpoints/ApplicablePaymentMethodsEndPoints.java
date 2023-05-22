@@ -11,6 +11,7 @@ public class ApplicablePaymentMethodsEndPoints {
 	public static Response applicablePaymentMathods() {
 		
 		Response response = given()
+				
 				.contentType(ContentType.JSON)
 				.accept(ContentType.JSON)
 				.body(GlobalVariables.quote_id)

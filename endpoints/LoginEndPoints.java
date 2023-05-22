@@ -10,6 +10,7 @@ public class LoginEndPoints {
 	public static Response Login(LoginPojo userPayload){
 		
 		Response response= 	given()
+				
 			.contentType(ContentType.JSON)
 			.accept(ContentType.JSON)
 			.body(userPayload)
@@ -24,6 +25,7 @@ public class LoginEndPoints {
 		public static Response ResendOtp(LoginPojo userPayload){
 			
 			Response response= 	given()
+					
 				.contentType(ContentType.JSON)
 				.accept(ContentType.JSON)
 				.body(userPayload)
@@ -37,6 +39,7 @@ public class LoginEndPoints {
 	public static Response verifyOtp(LoginPojo userPayload){
 		
 		Response response= 	given()
+				
 				.contentType(ContentType.JSON)
 				.accept(ContentType.JSON)
 				.body(userPayload)

@@ -34,4 +34,7 @@ public class Routes {
 	//Verify IFSC
 	public static String verifyIfsc_post_url = base_url +"/api/order-place/verify-ifsc";
 	
+	//Order Available Timeslots
+	public static String order_availableSlot_get_url = base_url +"/api/order-place/order-available-timeslots"; 
+	
 }

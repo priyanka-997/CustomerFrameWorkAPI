@@ -12,6 +12,7 @@ public class ListVariantsEndPoints {
 		String bearerToken = GlobalVariables.token;	
 		
 	Response response =	given()
+			
 			.headers("Authorization", "Bearer " +bearerToken)
 		.contentType(ContentType.JSON)
 		.accept(ContentType.JSON)

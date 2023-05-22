@@ -9,6 +9,7 @@ public class AddUpdateAddressEndPoints {
 	public static Response addUpdateAddress(String addUpdateAddressPayload) {
 		
 		Response response = (Response) given()
+				
 				.headers("Authorization", "Bearer " +GlobalVariables.token)
 				.contentType(ContentType.JSON)
 				.accept(ContentType.JSON)

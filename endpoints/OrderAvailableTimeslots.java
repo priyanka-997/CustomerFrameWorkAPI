@@ -4,23 +4,20 @@ import io.restassured.response.Response;
 import static io.restassured.RestAssured.given;
 import io.restassured.http.ContentType;
 
-
-public class GetAddressEndPoints {
+public class OrderAvailableTimeslots {
 	
 	
-	public static Response address() {
+	public static Response availableTimeslots() {
 		
 	Response response = (Response) given()
 			
+			.headers("Authorization", "Bearer " +GlobalVariables.token)
 			.contentType(ContentType.JSON)
 			.accept(ContentType.JSON)
-			.headers("Authorization", "Bearer " +GlobalVariables.token )
-						
-			.when()
-			.get(Routes.getAddress_get_url);
-		return response;
 		
-		
+		.when()
+		.get(Routes.order_availableSlot_get_url)   ;
+	return response;
 		
 	}
 

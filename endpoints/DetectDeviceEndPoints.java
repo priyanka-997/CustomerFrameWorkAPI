@@ -10,6 +10,7 @@ public class DetectDeviceEndPoints {
 	public static Response detectDevice(DetectDevicePojo detectDevicePayload) {
 		
 	Response response= 	given()
+			
 		.contentType(ContentType.JSON)
 		.accept(ContentType.JSON)
 		.body(detectDevicePayload)

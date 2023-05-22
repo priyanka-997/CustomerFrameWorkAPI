@@ -12,6 +12,7 @@ public class PincodeServiceableEndPoints {
 		
 		
 		Response response = given()
+				
 		.contentType(ContentType.JSON)
 				.accept(ContentType.JSON)
 				.body(pincodePayload)

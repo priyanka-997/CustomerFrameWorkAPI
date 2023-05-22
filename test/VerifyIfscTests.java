@@ -13,9 +13,9 @@ public class VerifyIfscTests {
 		
 		Response response =  VerifyIfscEndPoints.verifyIfsc();
 		
+		response.then().log().all();
 		Assert.assertEquals(response.jsonPath().getString("message"), "success");
 		Assert.assertEquals(response.getStatusCode(), 200);
-		Assert.assertEquals(response.time(), 500);
 		
 		System.out.println("Bank address is " +response.jsonPath().getString("data.ADDRESS"));
 		
