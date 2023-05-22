@@ -9,14 +9,13 @@ public class AddUpdateAddressTests {
 	
 public static String getaddUpdateAddressPayload() {
 		
-	String addUpdateAddressPayload= "{\n" +"\"house_no\":"
-			+ "\"A-53\", \n" +"\"street_no\":"
-			+"\"25\", \n" +"\"locality\":"
-			+"\"Noida City Center\", \n"+"\"pincode\":"
-			+"\"201301\", \n" +"\"city\":"
-			+"\"Noida\", \n" +"\"address_type\":"
-			+"\"Home\", \n" +"\"state\":"
-			+"\"Uttar Pradesh\"}";		
+	String addUpdateAddressPayload= "{ \n"  +"\"house_no\":\"A-53\", \n" 
+			                  +"\"street_no\":\"25\", \n" 
+			                  +"\"locality\":\"Noida City Center\", \n"
+			                  +"\"pincode\":\"201301\", \n" 
+			                  +"\"city\":\"Noida\", \n" 
+			                  +"\"address_type\":\"Home\", \n" 
+			                  +"\"state\":\"Uttar Pradesh\"}";		
 		
 		return addUpdateAddressPayload;
 }

@@ -16,7 +16,7 @@ public class OrderAvailableTimeslotsTests {
 		Response response = OrderAvailableTimeslots.availableTimeslots();
 		
 		response.then().log().all();
-		Assert.assertEquals(response.jsonPath().getString("message"), "success");
+		Assert.assertEquals(response.jsonPath().getString("message"), "Success");
 		Assert.assertEquals(response.getStatusCode(), 200);
 		
 		GlobalVariables.date = response.jsonPath().getInt("list[2].date");

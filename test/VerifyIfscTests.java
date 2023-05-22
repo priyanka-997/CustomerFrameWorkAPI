@@ -2,16 +2,24 @@ package api.test;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import api.endpoints.VerifyIfscEndPoints;
 import io.restassured.response.Response;
 
 public class VerifyIfscTests {
 	
+	public static String ifscPayload() {
+		
+		String ifsc = "icic0000876";
+		return ifsc;
+		
+	}	
+	
 	@Test(priority=11)
 	public static void testVerifyIfsc() {
 		
-		Response response =  VerifyIfscEndPoints.verifyIfsc();
+		
+		
+		Response response =  VerifyIfscEndPoints.verifyIfsc(ifscPayload());
 		
 		response.then().log().all();
 		Assert.assertEquals(response.jsonPath().getString("message"), "success");

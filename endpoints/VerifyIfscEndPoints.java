@@ -6,13 +6,13 @@ import io.restassured.http.ContentType;
 
 public class VerifyIfscEndPoints {
 	
-	public static Response verifyIfsc() {
+	public static Response verifyIfsc(String ifsc) {
 		Response response = (Response) given()
 				
 				.contentType(ContentType.JSON)
 				.accept(ContentType.JSON)
 				.headers("Authorization", "Bearer " +GlobalVariables.token)
-				.body(GlobalVariables.ifsc)
+				.body(ifsc)
 				
 				
 				.when()
